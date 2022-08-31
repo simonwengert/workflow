@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wfl.autoparallelize package &#8212; workflow  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="wfl.calculators package" href="wfl.calculators.html" />
+    <link rel="prev" title="wfl package" href="wfl.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">workflow  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="first_example.html">
+   First example
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="overview.html">
+   Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="overview.configset.html">
+     Input and output of atomic structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="overview.parallelisation.html">
+     Automatic parallelization of tasks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="operations.html">
+   Operations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.calculators.html">
+     Calculators in workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.generate.html">
+     Generating Configs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.select.html">
+     Selecting Configs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.descriptors.html">
+     Descriptors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.gap_fitting.html">
+     Fitting GAP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.multistage_gap_fitting.html">
+     Multistage GAP fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.ace_fitting.html">
+     ACE fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.utils.html">
+     Utility functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="workflows.html">
+   Workflows
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="workflows.rss.html">
+     How to do GAP-RSS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="workflows.mlip_fitting.html">
+     Fitting a MLIP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="examples.html">
+   Examples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.orca.html">
+     ORCA: all parallelisation options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.mace.html">
+     Parallelize MACE calculator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.normal_modes.html">
+     Normal Modes (non-periodic)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.smiles.html">
+     SMILES to .xyz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.autopara.html">
+     Customise Auto-parallelized Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.md.html">
+     MD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="wfl.html">
+     wfl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       wfl.autoparallelize package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="wfl.calculators.html">
+       wfl.calculators package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="wfl.calculators.orca.html">
+         wfl.calculators.orca package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.cli.html">
+       wfl.cli package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.descriptors.html">
+       wfl.descriptors package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="wfl.fit.html">
+       wfl.fit package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="wfl.fit.gap.html">
+         wfl.fit.gap package
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="wfl.fit.modify_database.html">
+         wfl.fit.modify_database package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.generate.html">
+       wfl.generate package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.scripts.html">
+       wfl.scripts package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.select.html">
+       wfl.select package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.utils.html">
+       wfl.utils package
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/wfl.autoparallelize.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.base">
+   wfl.autoparallelize.base module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.mpipool_support">
+   wfl.autoparallelize.mpipool_support module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.pool">
+   wfl.autoparallelize.pool module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.remote">
+   wfl.autoparallelize.remote module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.remoteinfo">
+   wfl.autoparallelize.remoteinfo module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.utils">
+   wfl.autoparallelize.utils module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>wfl.autoparallelize package</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.base">
+   wfl.autoparallelize.base module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.mpipool_support">
+   wfl.autoparallelize.mpipool_support module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.pool">
+   wfl.autoparallelize.pool module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.remote">
+   wfl.autoparallelize.remote module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.remoteinfo">
+   wfl.autoparallelize.remoteinfo module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize.utils">
+   wfl.autoparallelize.utils module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.autoparallelize">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="section" id="wfl-autoparallelize-package">
+<h1>wfl.autoparallelize package<a class="headerlink" href="#wfl-autoparallelize-package" title="Permalink to this headline">#</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="module-wfl.autoparallelize.base">
+<span id="wfl-autoparallelize-base-module"></span><h2>wfl.autoparallelize.base module<a class="headerlink" href="#module-wfl.autoparallelize.base" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.base.autoparallelize">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.base.</span></span><span class="sig-name descname"><span class="pre">autoparallelize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">def_autopara_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.base.autoparallelize" title="Permalink to this definition">#</a></dt>
+<dd><p>autoparallelize a function</p>
+<p>Use by defining function “op” which takes an input iterable and returns list of configs, and _after_ do</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">autoparallelized_op</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">autoparallelize</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">def_autopara_info</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;autoparallelize_keyword_param_1&quot;</span><span class="p">:</span> <span class="n">val</span><span class="p">,</span> <span class="s2">&quot;autoparallelize_keyword_param_2&quot;</span><span class="p">:</span> <span class="n">val</span><span class="p">,</span> <span class="o">...</span> <span class="p">},</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span>
+<span class="n">autoparallelized_op</span><span class="o">.</span><span class="n">doc</span> <span class="o">=</span> <span class="n">autopara_docstring</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">,</span> <span class="s2">&quot;iterable_contents&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The autoparallelized function can then be called with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">parallelized_op</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="p">,</span> <span class="p">[</span><span class="n">args</span> <span class="n">of</span> <span class="n">op</span><span class="p">],</span> <span class="n">autopara_info</span><span class="o">=</span><span class="n">AutoparaInfo</span><span class="p">(</span><span class="n">arg1</span><span class="o">=</span><span class="n">val1</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span> <span class="p">[</span><span class="n">kwargs</span> <span class="n">of</span> <span class="n">op</span><span class="p">])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> (<em>function</em>) – function to wrap in _autoparallelize_ll()</p></li>
+<li><p><strong>*args</strong> (<em>list</em>) – positional arguments to func, plus optional first or first and second inputs (iterable) and outputs (OutputSpec) arguments to wrapped function</p></li>
+<li><p><strong>def_autopara_info</strong> (<em>dict</em><em>, </em><em>default {}</em>) – dict with default values for AutoparaInfo constructor keywords setting default autoparallelization info</p></li>
+<li><p><strong>**kwargs</strong> (<em>dict</em>) – keyword arguments to func, plus optional inputs (iterable), outputs (OutputSpec), and  autopara_info (AutoparaInfo)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>wrapped_func_out</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>results of calling the function wrapped in autoparallelize via _autoparallelize_ll</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.base.autoparallelize_docstring">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.base.</span></span><span class="sig-name descname"><span class="pre">autoparallelize_docstring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_docstring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_iterable_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.base.autoparallelize_docstring" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-wfl.autoparallelize.mpipool_support">
+<span id="wfl-autoparallelize-mpipool-support-module"></span><h2>wfl.autoparallelize.mpipool_support module<a class="headerlink" href="#module-wfl.autoparallelize.mpipool_support" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.mpipool_support.init">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.mpipool_support.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.mpipool_support.init" title="Permalink to this definition">#</a></dt>
+<dd><p>Startup code when mpipool will be used. Only master MPI task exists
+function, others wait to do mpipool stuff.  Initialises
+<cite>mpipool_support.wfl_mpipool</cite> with created <cite>MPIExecutor</cite> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verbose</strong> (<em>int</em><em>, </em><em>default 1</em>) – <ul class="simple">
+<li><p>&gt;= 1 : minimal start/end messages</p></li>
+<li><p>&gt; 1  : print stack trace at startup, to tell where it was called from</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.mpipool_support.shutdown_and_barrier">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.mpipool_support.</span></span><span class="sig-name descname"><span class="pre">shutdown_and_barrier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.mpipool_support.shutdown_and_barrier" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-wfl.autoparallelize.pool">
+<span id="wfl-autoparallelize-pool-module"></span><h2>wfl.autoparallelize.pool module<a class="headerlink" href="#module-wfl.autoparallelize.pool" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.pool.do_in_pool">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.pool.</span></span><span class="sig-name descname"><span class="pre">do_in_pool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_python_subprocesses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_inputs_per_python_subprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputspec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable_arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_failed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">[])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.pool.do_in_pool" title="Permalink to this definition">#</a></dt>
+<dd><p>parallelize some operation over an iterable</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_python_subprocesses</strong> (<em>int</em><em>, </em><em>default os.environ</em><em>[</em><em>'WFL_NUM_PYTHON_SUBPROCESSES'</em><em>]</em>) – number of processes to parallelize over, 0 for running in serial</p></li>
+<li><p><strong>num_inputs_per_python_subprocess</strong> (<em>int</em><em>, </em><em>default 1</em>) – number of items from iterable to pass to kach invocation of operation</p></li>
+<li><p><strong>iterable</strong> (<em>iterable</em><em>, </em><em>default None</em>) – iterable to loop over, often ConfigSet but could also be other things like range()</p></li>
+<li><p><strong>outputspec</strong> (<a class="reference internal" href="wfl.html#wfl.configset.OutputSpec" title="wfl.configset.OutputSpec"><em>OutputSpec</em></a><em>, </em><em>defaulat None</em>) – object containing returned Atoms objects</p></li>
+<li><p><strong>op</strong> (<em>callable</em>) – function to call with each chunk</p></li>
+<li><p><strong>iterable_arg</strong> (<em>itr</em><em> or </em><em>str</em><em>, </em><em>default 0</em>) – positional argument or keyword argument to place iterable items in when calling op</p></li>
+<li><p><strong>skip_failed</strong> (<em>bool</em><em>, </em><em>default True</em>) – skip function calls that return None</p></li>
+<li><p><strong>initializer</strong> (<em>(</em><em>callable</em><em>, </em><em>list</em><em>)</em><em>, </em><em>default</em><em> (</em><em>None</em><em>, </em><em>[</em><em>]</em><em>)</em>) – function to call at beginning of each thread and its positional args</p></li>
+<li><p><strong>args</strong> (<em>list</em>) – positional arguments to op</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – keyword arguments to op</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ConfigSet containing returned configs if outputspec is not None, otherwise None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.autoparallelize.remote">
+<span id="wfl-autoparallelize-remote-module"></span><h2>wfl.autoparallelize.remote module<a class="headerlink" href="#module-wfl.autoparallelize.remote" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.remote.do_remotely">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.remote.</span></span><span class="sig-name descname"><span class="pre">do_remotely</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash_ignore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_inputs_per_python_subprocess</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputspec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">op</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable_arg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_failed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initializer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(None,</span> <span class="pre">[])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.remote.do_remotely" title="Permalink to this definition">#</a></dt>
+<dd><p>run tasks as series of remote jobs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>remote_info</strong> (<a class="reference internal" href="#wfl.autoparallelize.remoteinfo.RemoteInfo" title="wfl.autoparallelize.remoteinfo.RemoteInfo"><em>RemoteInfo</em></a>) – object with all information on remote job, including system, resources, job num_inputs_per_python_subprocess, etc, or dict of kwargs for its constructor</p></li>
+<li><p><strong>quiet</strong> (<em>bool</em><em>, </em><em>default False</em>) – do not output (to stderr) progress info</p></li>
+<li><p><strong>args</strong> (<em>See autoparallelize.autoparallelize</em><em>(</em><em>) </em><em>for other</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.autoparallelize.remoteinfo">
+<span id="wfl-autoparallelize-remoteinfo-module"></span><h2>wfl.autoparallelize.remoteinfo module<a class="headerlink" href="#module-wfl.autoparallelize.remoteinfo" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="wfl.autoparallelize.remoteinfo.RemoteInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.remoteinfo.</span></span><span class="sig-name descname"><span class="pre">RemoteInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sys_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_inputs_per_queued_job</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_cmds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_cmds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header_extra</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exact_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partial_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_failures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.remoteinfo.RemoteInfo" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create a RemoteInfo object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sys_name</strong> (<em>str</em>) – name of system to run on</p></li>
+<li><p><strong>job_name</strong> (<em>str</em>) – name for job (unique within this project)</p></li>
+<li><p><strong>resources</strong> (<em>dict</em><em> or </em><em>Resources</em>) – expyre.resources.Resources or kwargs for its constructor</p></li>
+<li><p><strong>num_inputs_per_queued_job</strong> (<em>int</em><em>, </em><em>default -100</em>) – num_inputs_per_python_subprocess for each job. If negative will be multiplied by iterable_autopara_wrappable num_inputs_per_python_subprocess</p></li>
+<li><p><strong>pre_cmds</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – commands to run before starting job</p></li>
+<li><p><strong>post_cmds</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – commands to run after finishing job</p></li>
+<li><p><strong>env_vars</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – environment variables to set before starting job</p></li>
+<li><p><strong>input_files</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – input_files to stage in starting job</p></li>
+<li><p><strong>output_files</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – output_files to stage out when job is done</p></li>
+<li><p><strong>header_extra</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>optional</em>) – extra lines to add to queuing system header</p></li>
+<li><p><strong>exact_fit</strong> (<em>bool</em><em>, </em><em>default True</em>) – require exact fit to node size</p></li>
+<li><p><strong>partial_node</strong> (<em>bool</em><em>, </em><em>default True</em>) – allow jobs that take less than a whole node, overrides exact_fit</p></li>
+<li><p><strong>timeout</strong> (<em>int</em>) – time to wait in get_results before giving up</p></li>
+<li><p><strong>check_interval</strong> (<em>int</em>) – check_interval arg to pass to get_results</p></li>
+<li><p><strong>skip_failures</strong> (<em>bool</em><em>, </em><em>default False</em>) – skip failures in remote jobs</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.autoparallelize.utils">
+<span id="wfl-autoparallelize-utils-module"></span><h2>wfl.autoparallelize.utils module<a class="headerlink" href="#module-wfl.autoparallelize.utils" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.utils.get_remote_info">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.utils.</span></span><span class="sig-name descname"><span class="pre">get_remote_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remote_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'WFL_EXPYRE_INFO'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.utils.get_remote_info" title="Permalink to this definition">#</a></dt>
+<dd><p>get remote_info dict from passed in dict, label, and/or env. var</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>remote_info</strong> (<a class="reference internal" href="#wfl.autoparallelize.remoteinfo.RemoteInfo" title="wfl.autoparallelize.remoteinfo.RemoteInfo"><em>RemoteInfo</em></a><em>, </em><em>default content of env var WFL_EXPYRE_INFO</em>) – information for running on remote machine.  If None, use WFL_EXPYRE_INFO env var, as
+json file if string, as RemoteInfo kwargs dict if keys include sys_name, or as dict of
+RemoteInfo kwrgs with keys that match end of stack trace with function names separated by ‘.’.</p></li>
+<li><p><strong>remote_label</strong> (<em>str</em><em>, </em><em>default None</em>) – remote_label to use for operation, to match to remote_info dict keys.  If none, use calling routine filename ‘::’ calling function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>remote_info</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#wfl.autoparallelize.remoteinfo.RemoteInfo" title="wfl.autoparallelize.remoteinfo.RemoteInfo">RemoteInfo</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.autoparallelize.utils.grouper">
+<span class="sig-prename descclassname"><span class="pre">wfl.autoparallelize.utils.</span></span><span class="sig-name descname"><span class="pre">grouper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.autoparallelize.utils.grouper" title="Permalink to this definition">#</a></dt>
+<dd><p>iterator that goes over iterable in specified size groups</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterable</strong> (<em>any iterable</em>) – iterable to loop over</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – size of group in each returned tuple</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>sequence of tuples, with items from iterable, each of size n (or smaller if n items are not available)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.autoparallelize">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-wfl.autoparallelize" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="wfl.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">wfl package</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="wfl.calculators.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">wfl.calculators package</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By N. Bernstein, T. K. Stenczel, E. Gelzinyte<br/>
+  
+      &copy; Copyright .<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

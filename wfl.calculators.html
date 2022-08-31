@@ -1,0 +1,1017 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wfl.calculators package &#8212; workflow  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="wfl.calculators.orca package" href="wfl.calculators.orca.html" />
+    <link rel="prev" title="wfl.autoparallelize package" href="wfl.autoparallelize.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">workflow  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="first_example.html">
+   First example
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="overview.html">
+   Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="overview.configset.html">
+     Input and output of atomic structures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="overview.parallelisation.html">
+     Automatic parallelization of tasks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="operations.html">
+   Operations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.calculators.html">
+     Calculators in workflow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.generate.html">
+     Generating Configs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.select.html">
+     Selecting Configs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.descriptors.html">
+     Descriptors
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.gap_fitting.html">
+     Fitting GAP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.multistage_gap_fitting.html">
+     Multistage GAP fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.ace_fitting.html">
+     ACE fitting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="operations.utils.html">
+     Utility functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="workflows.html">
+   Workflows
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="workflows.rss.html">
+     How to do GAP-RSS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="workflows.mlip_fitting.html">
+     Fitting a MLIP
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="examples.html">
+   Examples
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.orca.html">
+     ORCA: all parallelisation options
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.mace.html">
+     Parallelize MACE calculator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.normal_modes.html">
+     Normal Modes (non-periodic)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.smiles.html">
+     SMILES to .xyz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.autopara.html">
+     Customise Auto-parallelized Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="examples.md.html">
+     MD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   Modules
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="wfl.html">
+     wfl package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.autoparallelize.html">
+       wfl.autoparallelize package
+      </a>
+     </li>
+     <li class="toctree-l3 current active has-children">
+      <a class="current reference internal" href="#">
+       wfl.calculators package
+      </a>
+      <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="wfl.calculators.orca.html">
+         wfl.calculators.orca package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.cli.html">
+       wfl.cli package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.descriptors.html">
+       wfl.descriptors package
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="wfl.fit.html">
+       wfl.fit package
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="wfl.fit.gap.html">
+         wfl.fit.gap package
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="wfl.fit.modify_database.html">
+         wfl.fit.modify_database package
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.generate.html">
+       wfl.generate package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.scripts.html">
+       wfl.scripts package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.select.html">
+       wfl.select package
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wfl.utils.html">
+       wfl.utils package
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/wfl.calculators.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subpackages">
+   Subpackages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.castep">
+   wfl.calculators.castep module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.committee">
+   wfl.calculators.committee module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.dft">
+   wfl.calculators.dft module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.espresso">
+   wfl.calculators.espresso module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.generic">
+   wfl.calculators.generic module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.utils">
+   wfl.calculators.utils module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.vasp">
+   wfl.calculators.vasp module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>wfl.calculators package</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subpackages">
+   Subpackages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.castep">
+   wfl.calculators.castep module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.committee">
+   wfl.calculators.committee module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.dft">
+   wfl.calculators.dft module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.espresso">
+   wfl.calculators.espresso module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.generic">
+   wfl.calculators.generic module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.utils">
+   wfl.calculators.utils module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators.vasp">
+   wfl.calculators.vasp module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-wfl.calculators">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="section" id="wfl-calculators-package">
+<h1>wfl.calculators package<a class="headerlink" href="#wfl-calculators-package" title="Permalink to this headline">#</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wfl.calculators.orca.html">wfl.calculators.orca package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wfl.calculators.orca.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wfl.calculators.orca.html#module-wfl.calculators.orca.basinhopping">wfl.calculators.orca.basinhopping module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wfl.calculators.orca.html#module-wfl.calculators.orca">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
+</div>
+<div class="section" id="module-wfl.calculators.castep">
+<span id="wfl-calculators-castep-module"></span><h2>wfl.calculators.castep module<a class="headerlink" href="#module-wfl.calculators.castep" title="Permalink to this headline">#</a></h2>
+<p>CASTEP calculator with functionality to use both MPI and multiprocessing</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.castep.evaluate_autopara_wrappable">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.castep.</span></span><span class="sig-name descname"><span class="pre">evaluate_autopara_wrappable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workdir_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'run_CASTEP_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CASTEP_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.castep.evaluate_autopara_wrappable" title="Permalink to this definition">#</a></dt>
+<dd><p>Evaluate a configuration with CASTEP</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>Atoms / list</em><em>(</em><em>Atoms</em><em>)</em>) – input atomic configs</p></li>
+<li><p><strong>workdir_root</strong> (<em>path-like</em><em>, </em><em>default os.getcwd</em><em>(</em><em>)</em>) – directory to put calculation directories into</p></li>
+<li><p><strong>dir_prefix</strong> (<em>str</em><em>, </em><em>default 'CASTEP_run_'</em>) – directory name prefix for calculations</p></li>
+<li><p><strong>calculator_command</strong> – </p></li>
+<li><p><strong>calculator_kwargs</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>output_prefix</strong> (<em>str / None</em><em>, </em><em>default 'CASTEP_'</em>) – prefix for info/arrays keys, None for SinglePointCalculator</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – ase-compatible property names, None for default list (energy, forces, stress)</p></li>
+<li><p><strong>keep_files</strong> (<em>bool / None / &quot;default&quot; / list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default &quot;default&quot;</em>) – <p>what kind of files to keep from the run</p>
+<blockquote>
+<div><ul>
+<li><p>True : everything kept</p></li>
+<li><p>None, False : nothing kept, unless calculation fails</p></li>
+<li><p>”default”   : only ones needed for NOMAD uploads (‘*.castep’, ‘*.param’, ‘*.cell’)</p></li>
+<li><p>list(str)   : list of file globs to save</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atoms</strong> – Atoms or list(Atoms) with calculated properties</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Atoms or list(Atoms)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators.committee">
+<span id="wfl-calculators-committee-module"></span><h2>wfl.calculators.committee module<a class="headerlink" href="#module-wfl.calculators.committee" title="Permalink to this headline">#</a></h2>
+<p>Committee of Models</p>
+<p>Calculated properties with a list of models and saves them into info/arrays.
+Further operations (eg. mean, variance, etc.) with these are up to the user.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.committee.calculate_committee">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.committee.</span></span><span class="sig-name descname"><span class="pre">calculate_committee</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'committee_{}_'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.committee.calculate_committee" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculate energy and forces with a committee of models</p>
+<p class="rubric">Notes</p>
+<p>Supports formatter string in the output_prefix arg, but currently only with a single field literally “{}”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>Atoms / list</em><em>(</em><em>Atoms</em><em>)</em>) – input atomic configs</p></li>
+<li><p><strong>calculator_list</strong> (<em>list</em><em>(</em><em>Calculator</em><em>) </em><em>/ list</em><em>[</em><em>(</em><em>initializer</em><em>, </em><em>args</em><em>, </em><em>kwargs</em><em>)</em><em>]</em>) – list of calculators to use as a committee of models on the configs</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>[</em><em>str</em><em>]</em><em>, </em><em>default</em><em> [</em><em>'energy'</em><em>, </em><em>'forces'</em><em>, </em><em>'stress'</em><em>]</em>) – properties to calculate</p></li>
+<li><p><strong>output_prefix</strong> (<em>str</em><em>, </em><em>default=&quot;committee_&quot;</em>) – prefix for results coming from the committee of models.
+If includes “{}” then will use it as a format string, otherwise puts a number at the end of prefix for the
+index of the model in the committee of models</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atoms</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Atoms / list(Atoms)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators.dft">
+<span id="wfl-calculators-dft-module"></span><h2>wfl.calculators.dft module<a class="headerlink" href="#module-wfl.calculators.dft" title="Permalink to this headline">#</a></h2>
+<p>This is a unified wrapper for Plane Wave DFT codes.</p>
+<p>Currently implemented codes:
+- CASTEP
+- VASP
+- Quantum Espresso</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.dft.evaluate_dft">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.dft.</span></span><span class="sig-name descname"><span class="pre">evaluate_dft</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workdir_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DFT_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.dft.evaluate_dft" title="Permalink to this definition">#</a></dt>
+<dd><p>evaluate configurations with a DFT calculator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>list</em><em>(</em><em>Atoms</em><em>) </em><em>/ Configset</em>) – input atomic configs, needs to be iterable</p></li>
+<li><p><strong>outputs</strong> (<em>list</em><em>(</em><em>Atoms</em><em>) </em><em>/ Configset_out</em>) – output atomic configs</p></li>
+<li><p><strong>calculator_name</strong> (<em>str {&quot;CASTEP&quot;</em><em>, </em><em>&quot;VASP&quot;}</em>) – name of Plane Wave DFT calculator, options are: “CASTEP”, “VASP”</p></li>
+<li><p><strong>workdir_root</strong> (<em>path-like</em><em>, </em><em>default os.getcwd</em><em>(</em><em>)</em>) – directory to put calculation directories into</p></li>
+<li><p><strong>dir_prefix</strong> (<em>str</em><em>, </em><em>default 'DFT_'</em>) – directory name prefix for calculations</p></li>
+<li><p><strong>calculator_command</strong> (<em>str</em>) – command for calculator, only MPI and the executable
+eg. “mpirun -n 4 /path-to/castep.mpi”</p></li>
+<li><p><strong>calculator_kwargs</strong> (<em>dict</em>) – all keyword arguments for the calculator object</p></li>
+<li><p><strong>output_prefix</strong> (<em>str / None</em>) – prefix for info/arrays keys, None for SinglePointCalculator
+default is the calculator name</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default None</em>) – ase-compatible property names,
+None for default list (energy, forces, stress)</p></li>
+<li><p><strong>keep_files</strong> (<em>bool / None / &quot;default&quot; / list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default &quot;default&quot;</em>) – <dl class="simple">
+<dt>what kind of files to keep from the run</dt><dd><ul>
+<li><p>True : everything kept</p></li>
+<li><p>None, False : nothing kept, unless calculation fails</p></li>
+<li><p>”default”   : only ones needed for NOMAD uploads depending on calculator</p></li>
+<li><p>list(str)   : list of file globs to save</p></li>
+</ul>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>kwargs</strong> – any other keyword arguments that need to be passed to the
+evaluation operation function.
+only implemented for VASP: potcar_top_dir, potcar_rel_dir</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ConfigSet of configurations with calculated properties</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators.espresso">
+<span id="wfl-calculators-espresso-module"></span><h2>wfl.calculators.espresso module<a class="headerlink" href="#module-wfl.calculators.espresso" title="Permalink to this headline">#</a></h2>
+<p>Quantum Espresso interface</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="wfl.calculators.espresso.Espresso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">wfl.calculators.espresso.</span></span><span class="sig-name descname"><span class="pre">Espresso</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'run_QE_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scratch_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.espresso.Espresso" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ase.calculators.espresso.Espresso</span></code></p>
+<p>Extension of ASE’s Espresso calculator</p>
+<dl class="simple">
+<dt>dir_prefix: str, default ‘QE-run_’</dt><dd><p>directory name prefix for calculations</p>
+</dd>
+<dt>keep_files: bool / None / “default” / list(str), default “default”</dt><dd><dl class="simple">
+<dt>what kind of files to keep from the run</dt><dd><ul class="simple">
+<li><p>True : everything kept</p></li>
+<li><p>None, False : nothing kept, unless calculation fails</p></li>
+<li><p>“default”   : only ones needed for NOMAD uploads (‘*.pwo’)</p></li>
+<li><p>list(str)   : list of file globs to save</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>scratch_path: str, default None</dt><dd><p>temporary directory to execute calculations in and delete
+or copy back results if needed (set by “keep_files”).
+For example, directory on an SSD with fast file io.</p>
+</dd>
+<dt>calculator_command: str</dt><dd><p>command for QE, without any prefix or redirection set.
+for example: “mpirun -n 4 /path/to/pw.x”</p>
+</dd>
+</dl>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs: arguments for ase.calculators.espresso.Espresso</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="wfl.calculators.espresso.Espresso.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['energy',</span> <span class="pre">'forces',</span> <span class="pre">'stress']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_changes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['positions',</span> <span class="pre">'numbers',</span> <span class="pre">'cell',</span> <span class="pre">'pbc',</span> <span class="pre">'initial_charges',</span> <span class="pre">'initial_magmoms']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.espresso.Espresso.calculate" title="Permalink to this definition">#</a></dt>
+<dd><p>Does the calculation. Handles the working directories in addition to regular
+ASE calculation operations (writing input, executing, reading_results)
+Reimplements &amp; extends GenericFileIOCalculator.calculate() for the development version of ASE
+or FileIOCalculator.calculate() for the v3.22.1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wfl.calculators.espresso.Espresso.cleanup">
+<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.espresso.Espresso.cleanup" title="Permalink to this definition">#</a></dt>
+<dd><p>Clean all (empty) directories that could not have been removed
+immediately after the calculation, for example, because other parallel
+process might be using them.
+Done because <cite>self.workdir_root</cite> gets created upon initialisation, but we
+can’t ever be sure it’s not needed anymore, so let’s not do it automatically.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wfl.calculators.espresso.Espresso.default_parameters">
+<span class="sig-name descname"><span class="pre">default_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#wfl.calculators.espresso.Espresso.default_parameters" title="Permalink to this definition">#</a></dt>
+<dd><p>Default parameters</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="wfl.calculators.espresso.Espresso.implemented_properties">
+<span class="sig-name descname"><span class="pre">implemented_properties</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['energy',</span> <span class="pre">'forces',</span> <span class="pre">'stress']</span></em><a class="headerlink" href="#wfl.calculators.espresso.Espresso.implemented_properties" title="Permalink to this definition">#</a></dt>
+<dd><p>Properties calculator can handle (energy, forces, …)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="wfl.calculators.espresso.Espresso.setup_params_for_this_calc">
+<span class="sig-name descname"><span class="pre">setup_params_for_this_calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.espresso.Espresso.setup_params_for_this_calc" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators.generic">
+<span id="wfl-calculators-generic-module"></span><h2>wfl.calculators.generic module<a class="headerlink" href="#module-wfl.calculators.generic" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.generic.run">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.generic.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.generic.run" title="Permalink to this definition">#</a></dt>
+<dd><p>evaluates configs using an arbitrary calculator and store results in SinglePointCalculator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>iterable</em><em>(</em><em>Atoms</em><em>)</em>) – input quantities of type Atoms</p></li>
+<li><p><strong>outputs</strong> (<a class="reference internal" href="wfl.html#wfl.configset.OutputSpec" title="wfl.configset.OutputSpec"><em>OutputSpec</em></a><em> or </em><em>None</em>) – where to write output atomic configs, or None for no output (i.e. only side-effects)</p></li>
+<li><p><strong>calculator</strong> (<em>Calculator /</em><em> (</em><em>initializer</em><em>, </em><em>args</em><em>, </em><em>kwargs</em><em>)</em>) – ASE calculator or routine to call to create calculator</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default</em><em> [</em><em>'energy'</em><em>, </em><em>'forces'</em><em>, </em><em>stress'</em><em>]</em>) – Properties to request from calculator. If any are not present after calculation (e.g.
+stress for nonperiodic configurations), a warning will be printed.</p></li>
+<li><p><strong>output_prefix</strong> (<em>str</em><em>, </em><em>default _auto_</em>) – String to prefix info/arrays key names where results will be stored.
+‘_auto_’ for automatically determining name of calculator constructor, and
+None for SinglePointCalculator instead of info/arrays.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – verbose output</p></li>
+<li><p><strong>autopara_info</strong> (<em>AutoparaInfo</em><em>, </em><em>default None</em>) – information for automatic parallelization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>co</strong> – output configs</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="wfl.html#wfl.configset.ConfigSet" title="wfl.configset.ConfigSet">ConfigSet</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.generic.run_autopara_wrappable">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.generic.</span></span><span class="sig-name descname"><span class="pre">run_autopara_wrappable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_auto_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_calc_exceptions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.generic.run_autopara_wrappable" title="Permalink to this definition">#</a></dt>
+<dd><p>evaluates configs using an arbitrary calculator and store results in SinglePointCalculator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calculator</strong> (<em>Calculator /</em><em> (</em><em>initializer</em><em>, </em><em>args</em><em>, </em><em>kwargs</em><em>)</em>) – ASE calculator or routine to call to create calculator</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default</em><em> [</em><em>'energy'</em><em>, </em><em>'forces'</em><em>, </em><em>stress'</em><em>]</em>) – Properties to request from calculator. If any are not present after calculation (e.g.
+stress for nonperiodic configurations), a warning will be printed.</p></li>
+<li><p><strong>output_prefix</strong> (<em>str</em><em>, </em><em>default _auto_</em>) – String to prefix info/arrays key names where results will be stored.
+‘_auto_’ for automatically determining name of calculator constructor, and
+None for SinglePointCalculator instead of info/arrays.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – verbose output</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators.utils">
+<span id="wfl-calculators-utils-module"></span><h2>wfl.calculators.utils module<a class="headerlink" href="#module-wfl.calculators.utils" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.utils.clean_failed_results">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.utils.</span></span><span class="sig-name descname"><span class="pre">clean_failed_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculation_succeeded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.utils.clean_failed_results" title="Permalink to this definition">#</a></dt>
+<dd><p>cleans stored calculations if calculation did not succeed or any results are None, after call to save_results()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> – see save_results()</p></li>
+<li><p><strong>properties</strong> – see save_results()</p></li>
+<li><p><strong>results_prefix</strong> – see save_results()</p></li>
+<li><p><strong>calculation_succeeded</strong> (<em>bool</em>) – whether calculation appears (so far) to have succeeded based on actual calculator run and success of save_reults() call</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>calculation_succeeded</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool, updated status of calculation success based on whether any results were None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.utils.clean_rundir">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.utils.</span></span><span class="sig-name descname"><span class="pre">clean_rundir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rundir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_keep_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculation_succeeded</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.utils.clean_rundir" title="Permalink to this definition">#</a></dt>
+<dd><p>clean up a run directory from a file-based calculator</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rundir</strong> (<em>str</em>) – path to run dir</p></li>
+<li><p><strong>keep_files</strong> (<em>'default' / list</em><em>(</em><em>str</em><em>) </em><em>/ '*' / bool / None</em>) – files to keep, None or False for nothing, ‘*’ or True for all</p></li>
+<li><p><strong>default_keep_files</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – files to keep if keep_files == ‘default’ or calculation_succeeded is False</p></li>
+<li><p><strong>calculation_succeeded</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.utils.handle_nonperiodic">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.utils.</span></span><span class="sig-name descname"><span class="pre">handle_nonperiodic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_mixed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.utils.handle_nonperiodic" title="Permalink to this definition">#</a></dt>
+<dd><p>prepare for a calculation by filtering out stress if nonperiodic</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>Atoms</em>) – input configuration</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of properties to calculate</p></li>
+<li><p><strong>allow_mixed</strong> (<em>bool</em><em>, </em><em>default=False</em>) – allow mixed periodicity, ie. not only TTT and FFF</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>nonperiodic</strong> (<em>bool</em>)</p></li>
+<li><p><strong>use_properties</strong> (<em>list</em>) – list of properties, filtering out stress for nonperiodic systems</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.utils.save_results">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.utils.</span></span><span class="sig-name descname"><span class="pre">save_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.utils.save_results" title="Permalink to this definition">#</a></dt>
+<dd><p>saves results of a calculation in a SinglePointCalculator or info/arrays keys</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>Atoms</em>) – configuration</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>) or </em><em>None</em>) – list of calculated properties to save, or None to use atoms.calc.results dict keys</p></li>
+<li><p><strong>results_prefix</strong> (<em>str / None</em><em> , </em><em>default None</em>) – if None, store in SinglePointCalculator, else store in results_prefix+&lt;property&gt;.
+str with length 0 is forbidden</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators.vasp">
+<span id="wfl-calculators-vasp-module"></span><h2>wfl.calculators.vasp module<a class="headerlink" href="#module-wfl.calculators.vasp" title="Permalink to this headline">#</a></h2>
+<p>VASP calculator</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="wfl.calculators.vasp.evaluate_autopara_wrappable">
+<span class="sig-prename descclassname"><span class="pre">wfl.calculators.vasp.</span></span><span class="sig-name descname"><span class="pre">evaluate_autopara_wrappable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workdir_root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'run_VASP_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_command</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculator_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'VASP_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wfl.calculators.vasp.evaluate_autopara_wrappable" title="Permalink to this definition">#</a></dt>
+<dd><p>Evaluate a configuration with VASP</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms</strong> (<em>Atoms / list</em><em>(</em><em>Atoms</em><em>)</em>) – input atomic configs</p></li>
+<li><p><strong>workdir_root</strong> (<em>path-like</em><em>, </em><em>default os.getcwd</em><em>(</em><em>)</em>) – directory to put calculation directories into</p></li>
+<li><p><strong>dir_prefix</strong> (<em>str</em><em>, </em><em>default 'VASP_run_'</em>) – directory name prefix for calculations</p></li>
+<li><p><strong>calculator_command</strong> (<em>str</em>) – command to run for vasp (overrides VASP_COMMAND and VASP_COMMAND_GAMMA)</p></li>
+<li><p><strong>calculator_kwargs</strong> (<em>dict</em>) – arguments to Vasp, plus optional additional keys ‘INCAR_file’ and ‘KPOINTS_file’.  Normal VASP calculator
+keys override contents of INCAR and KPOINTS.  To avoid ASE Vasp’s annoying default POTCAR path
+heuristics, key VASP_PP_PATH will be used to set corresponding env var (directory above &lt;chem_symbol&gt;/POTCAR),
+and if ‘pp’ (extra path below VASP_PP_PATH) is not specified it will default to ‘.’, rather than to guess
+based on XC.</p></li>
+<li><p><strong>output_prefix</strong> (<em>str / None</em><em>, </em><em>default 'VASP_'</em>) – prefix for info/arrays keys where results will be saved, None for SinglePointCalculator</p></li>
+<li><p><strong>properties</strong> (<em>list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default</em><em> [</em><em>'energy'</em><em>, </em><em>'forces'</em><em>, </em><em>'stress'</em><em>]</em>) – properties to calculate.  Note that ‘energy’ is used to calculate force-consistent
+value (ASE’s ‘free_energy’)</p></li>
+<li><p><strong>keep_files</strong> (<em>bool / None / &quot;default&quot; / list</em><em>(</em><em>str</em><em>)</em><em>, </em><em>default &quot;default&quot;</em>) – <dl class="simple">
+<dt>what kind of files to keep from the run</dt><dd><p>True : everything kept
+None, False : nothing kept
+“default”   : only ones needed for NOMAD uploads (‘POSCAR’, ‘INCAR’, ‘KPOINTS’, ‘OUTCAR’, ‘vasprun.xyz’)
+list(str)   : list of file globs to save</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Atoms or list(Atoms) with calculated properties</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-wfl.calculators">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-wfl.calculators" title="Permalink to this headline">#</a></h2>
+</div>
+</div>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="wfl.autoparallelize.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">wfl.autoparallelize package</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="wfl.calculators.orca.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">wfl.calculators.orca package</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By N. Bernstein, T. K. Stenczel, E. Gelzinyte<br/>
+  
+      &copy; Copyright .<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
