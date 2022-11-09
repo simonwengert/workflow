@@ -39,7 +39,7 @@ jobs:
         run: conda install pip
 
       - name: Install dependencies from pip (some will already be taken care of by conda's phonop3py and its dependencies)
-        run: pip install wheel setuptools ase numpy scipy click matplotlib pandas pyyaml spglib rdkit-pypi flake8 pytest pytest-cov
+        run: pip install wheel setuptools ase numpy scipy click matplotlib pandas pyyaml spglib rdkit-pypi flake8 pytest pytest-cov nbsphinx
 
       - name: Install intel-mkl-full for phono3py
         run: |
@@ -123,6 +123,9 @@ jobs:
           echo "which pw.x"
           which pw.x
           ls -l /usr/bin/pw.x
+
+      - name: Install pandoc
+          sudo apt-get install pandoc
 
       - name: Lint with flake8
         run: |
