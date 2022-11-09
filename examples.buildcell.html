@@ -763,21 +763,23 @@ to generate. Finally, we set the <code class="docutils literal notranslate"><spa
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 
-from wfl.generate.buildcell import create_input, run
+from wfl.generate import buildcell
 from wfl.configset import OutputSpec
 
 
 inputs = range(20)
 outputspec = OutputSpec(&#39;buildcell_output.xyz&#39;)
 
-buildcell_input = create_input(z=13, vol_per_atom=10, bond_lengths=2)
+buildcell_input = buildcell.create_input(z=13, vol_per_atom=10, bond_lengths=2)
 
-run(inputs=inputs,
+outputs = buildcell.run(
+    inputs=inputs,
     outputs=outputspec,
     buildcell_input=buildcell_input,
     buildcell_cmd=&#39;buildcell&#39;,
     )
 
+assert len(list(outputs)) == len(inputs)
 assert os.path.exists(outputspec.files[0]), f&#39;{outputspec.files[0]} not found!&#39;
 </pre></div>
 </div>
